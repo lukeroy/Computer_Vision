@@ -15,7 +15,6 @@ while True:
     success, img = cap.read()
     imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     results = hands.process(imgRGB)
-    #print(results.multi_hand_landmarks)
 
     if results.multi_hand_landmarks:
         for handLandmark in results.multi_hand_landmarks:
@@ -37,4 +36,3 @@ while True:
 
     cv2.imshow("Image", img)
     cv2.waitKey(1)
-
